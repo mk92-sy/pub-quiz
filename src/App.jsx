@@ -1,12 +1,11 @@
-import Question from "./components/Question";
+import Question from "./components/organisms/Question";
 
 function App() {
-    return (
-        <div className="App">
-            <h1>Pub-Quiz</h1>
-            <Question />
-        </div>
-    );
+  return (
+    <>
+      <Question />
+    </>
+  );
 }
 
 export default App;

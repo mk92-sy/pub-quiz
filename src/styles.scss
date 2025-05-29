@@ -1,0 +1,108 @@
+
+@font-face {
+  font-family: 'SeoulAlrim';
+  src: url('./assets/fonts/SeoulAlrim-Heavy.woff2') format('woff2'),
+    url('./assets/fonts/SeoulAlrim-Heavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./assets/fonts/Pretendard-Bold.subset.woff2') format('woff2'),
+    url('./assets/fonts/Pretendard-Bold.subset.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./assets/fonts/Pretendard-Medium.subset.woff2') format('woff2'),
+    url('./assets/fonts/Pretendard-Medium.subset.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./assets/fonts/Pretendard-Light.subset.woff2') format('woff2'),
+    url('./assets/fonts/Pretendard-Light.subset.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+html,body{
+  width:100%;
+  height:100%;
+}
+body{
+  background: #2A7B9B;
+  background: linear-gradient(153deg, rgba(42, 123, 155, 1) 0%, rgba(129, 89, 179, 1) 100%);
+  font-family: 'Pretendard', sans-serif;
+}
+h{
+  &1{
+    font-size: 1.7rem;
+  }
+  &2{
+    font-size: 1.4rem;
+  }
+  &3{
+    font-size: 1.3rem;
+  }
+  &4{
+    font-size: 1.2rem;
+  }
+  &5{
+    font-size: 1.1rem;
+  }
+}
+.sub-title{
+  font-size: 1.2rem;
+}
+.mt-8{
+  margin-top:0.5rem;
+}
+.mt-16{
+  margin-top:1rem;
+}
+#root{
+  width:100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.w-full{
+  width:100%;
+}
+.card{
+  width:calc(100% - 4rem);
+  max-width: 50rem;
+  padding:2rem;
+  margin:0 auto;
+  background-color: #fff;
+  border-radius: 2rem;
+}
+.error{
+  color:red;
+}
+.success{
+  color:green;
+}
+input[type='text']{
+  width:100%;
+  background-color: #eee;
+  border:0;
+  padding:1rem 1.2rem;
+  border-radius: 0.6rem;
+}
