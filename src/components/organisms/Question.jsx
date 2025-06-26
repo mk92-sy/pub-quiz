@@ -15,11 +15,13 @@ const Question = () => {
   const [feedback, setFeedback] = useState("");
 
   const checkAnswer = () => {
-    if (
-      currentQuestion.answer.some(
-        (ans) => ans.toLowerCase() === userAnswer.toLowerCase()
-      )
-    ) {
+    const userWords = userAnswer.toLowerCase().split(/[\s,]+/);
+    const keywords = currentQuestion.answer.map((w) => w.toLowerCase());
+
+    const matchCount = keywords.filter((kw) => userWords.includes(kw)).length;
+    const matchRatio = matchCount / keywords.length;
+
+    if (matchRatio >= 0.5) {
       setFeedback("정답입니다!");
     } else {
       setFeedback(`틀렸습니다. ${currentQuestion.explanation}`);
@@ -43,17 +45,15 @@ const Question = () => {
         className={`card ${isSettingOpen ? "open" : "close"}`}
       >
         <Button
-          className="btn-setting"
+          className={`btn-setting ${isSettingOpen ? "active" : ""}`}
           onClick={() => {
             setIsSettingOpen(!isSettingOpen);
           }}
-        >
-          ⚙
-        </Button>
+        />
 
         <Box position="tl" gap={6}>
-          <h2 className="sub-title">❓</h2>
-          <p>{currentQuestion.question}</p>
+          <h2 className="sub-title">Q.</h2>
+          <p className="question-text">{currentQuestion.question}</p>
         </Box>
         <Box gap={4} className="mt-8">
           <Badge
@@ -65,12 +65,15 @@ const Question = () => {
                 : "yellow"
             }
           >
+            ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
             {currentQuestion.tag}
           </Badge>
           {"⭐".repeat(currentQuestion.difficulty)}
+          ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
         </Box>
         <input
           className="mt-8"
+          ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
           type="text"
           value={userAnswer}
           onChange={(e) => setUserAnswer(e.target.value)}
@@ -84,12 +87,17 @@ const Question = () => {
               ? "success"
               : "error"
           } mt-8`}
+          xzassssssssssssssssssssssssssssssss
         >
           {feedback}
         </p>
         <Box gap={8} className="btn-area w-full mt-16">
-          <Button onClick={checkAnswer}>제출</Button>
-          <Button onClick={loadNewQuestion}>다른 문제 불러오기 🔄</Button>
+          <Button className="btn-submit" onClick={checkAnswer}>
+            제출
+          </Button>
+          <Button className="btn-reload" onClick={loadNewQuestion}>
+            다른 문제
+          </Button>
         </Box>
       </Box>
     </>
