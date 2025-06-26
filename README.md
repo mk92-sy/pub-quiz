@@ -1,12 +1,21 @@
-# React + Vite
+# 🎉 Pub-Quiz
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+웹 개발자들을 위한 html/css/js 워밍업 테스트 게임!
 
-Currently, two official plugins are available:
+## 📌 주요 기능
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 난이도 설정 가능 초보자부터 고수까지! 랜덤 또는 별 1~3개의 난이도로 퀴즈를 설정할 수 있음.
+- 카테고리 선택 기능 HTML, CSS, JavaScript 중 선택하거나 랜덤으로 도전할 수 있음.
 
-## Expanding the ESLint configuration
+## 🎯 누가 사용하면 좋을까?
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 자기 실력을 확인하고 싶은 개발자
+- 면접 대비로 문제를 풀어보고 싶은 취준생
+- 재미 삼아 개발 퀴즈를 즐기고 싶은 누구나!
+
+## 😎 업데이트 예정
+
+- 별도 테스트 옵션 및 오답노트 추가
+
+_이 앱은 정식 버전이 아닙니다._
+_v.0.0.1_
