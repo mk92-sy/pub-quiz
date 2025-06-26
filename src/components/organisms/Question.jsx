@@ -65,15 +65,12 @@ const Question = () => {
                 : "yellow"
             }
           >
-            ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
             {currentQuestion.tag}
           </Badge>
           {"⭐".repeat(currentQuestion.difficulty)}
-          ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
         </Box>
         <input
           className="mt-8"
-          ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
           type="text"
           value={userAnswer}
           onChange={(e) => setUserAnswer(e.target.value)}
@@ -87,7 +84,6 @@ const Question = () => {
               ? "success"
               : "error"
           } mt-8`}
-          xzassssssssssssssssssssssssssssssss
         >
           {feedback}
         </p>
